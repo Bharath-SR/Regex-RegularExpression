@@ -14,27 +14,28 @@ import java.util.regex.Pattern;
 public class RegularExpression {
 
 	/**
-	 * UC4 - Mobile Number validator
+	 * UC5 - Password validator
 	 */
-	static boolean validate(String pattern, CharSequence num) {
-		return Pattern.compile(pattern).matcher(num).matches();
+static boolean validate(String pattern, String text) {
+		
+		return Pattern.compile(pattern).matcher(text).matches();
 	}
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("welcome to Regex");
-			String pattern ="^(91)[-.+]{1}[1-9]{1}[0-9]{9}$";
+		System.out.println("welcome to Password Validator");
+			String pattern ="^[a-zA-Z0-9]{8,}$";
 
 			Scanner scanner = new Scanner(System.in);
-			System.out.print("Please Enter mobile number:");
+			System.out.print("Please Enter password:");
 
-			CharSequence num = scanner.next();
+			String  password= scanner.next();
 
-			boolean isValid = validate(pattern, num);
+			boolean isValid = validate(pattern, password);
 
 			if (isValid) {
-				System.out.println("It's Valid Mobile Number");
+				System.out.println("It's a valid password .");
 			} else {
-				System.out.println("It is not a valid mobile number");
+				System.out.println("It is not a valid password");
 			}
 		}
 }
