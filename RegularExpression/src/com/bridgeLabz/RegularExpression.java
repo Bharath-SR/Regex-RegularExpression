@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 public class RegularExpression {
 
 	/**
-	 * UC6 - Password validator 2
+	 * UC7 - Password validator 3
 	 */
 static boolean validate(String pattern, String text) {
 		
@@ -23,7 +23,7 @@ static boolean validate(String pattern, String text) {
 
 	public static void main(String[] args) {
 		System.out.println("welcome to Password Validator");
-			String pattern ="^[A-Z]{1}[a-zA-Z0-9]{8,}$";;
+			String pattern ="^[0-9]{1}[a-zA-Z0-9]{8,}$";
 
 			Scanner scanner = new Scanner(System.in);
 			System.out.print("Please Enter password:");
