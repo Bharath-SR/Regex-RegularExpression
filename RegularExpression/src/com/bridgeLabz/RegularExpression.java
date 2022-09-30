@@ -15,28 +15,31 @@ public class RegularExpression {
 	/**
 	 * @param args
 	 */
-	public static boolean checkValidPincode(String firstName) {
-		String firstNameRegex= "^[A-Z]{1}[A-Za-z]{2,}$";
-		Pattern pattrenObject= Pattern.compile(firstNameRegex);
+	public static boolean checkValidPincode(String lastName) {
+		String lastName1= "^[A-Z]{1}[A-Za-z]{2,}$";
+		Pattern pattrenObject= Pattern.compile(lastName1);
 		
-		if(firstName==null) {
+		if(lastName1==null) {
 			return false;
 			
 		}
-		Matcher matcherObject = pattrenObject.matcher(firstName);
+		Matcher matcherObject = pattrenObject.matcher(lastName);
         return matcherObject.matches();
-	} 
+	}
 	public static void main(String[] args) {
 		
-		System.out.println("----- Name Validator -----");
+		System.out.println("LastName: ");
 		
-		String firstName ="Bha";
-		boolean isfirstName = checkValidPincode(firstName);
+		String lastName ="Se";
+		boolean islastName = checkValidPincode(lastName);
 		
-		if(isfirstName)
-			System.out.println(firstName+" is an Valid firstName");
+		if(islastName)
+			System.out.println(lastName+" is an Valid lastName");
 		else
-			System.out.println(firstName+" is an Invalid firstName");
+			System.out.println(lastName+" is an Invalid Name");
+		
+		
+		
 	}
 
 }
